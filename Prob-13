@@ -1,0 +1,39 @@
+#Roman to Integer prob-13
+
+class Solution(object):
+    def romanToInt(self, s):
+       
+        z=s+"#"
+        self.sum=0
+        for i in range(len(z)-1):
+            y=0
+            if z[i]=="I" and z[i+1]=="V":
+                y=-1
+            elif z[i]=="I" and z[i+1]=="X":
+                y=-1
+            elif z[i]=="X" and z[i+1]=="L":
+                y=-10
+            elif z[i]=="X" and z[i+1]=="C":
+                y=-10
+            elif z[i]=="C" and z[i+1]=="D":
+                y=-100
+            elif z[i]=="C" and z[i+1]=="M":
+                y=-100
+            elif z[i]=="I":
+                y=1
+            elif z[i]=="V":
+                y=5
+            elif z[i]=="X":
+                y=10
+            elif z[i]=="L":
+                y=50
+            elif z[i]=="C":
+                y=100
+            elif z[i]=="D":
+                y=500
+            elif z[i]=="M":
+                y=1000
+
+            self.sum+=y
+        return self.sum
+            
