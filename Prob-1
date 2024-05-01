@@ -2,6 +2,7 @@
 
 class Solution(object):
     def twoSum(self, nums, target):
+
         x=[]
         for i in range(len(nums)):
             
@@ -11,7 +12,5 @@ class Solution(object):
                 if sum==target:
                     x.append(i)
                     x.append(j)
-                    
-                
-            
+                        
         return x
