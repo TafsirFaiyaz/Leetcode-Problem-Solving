@@ -23,9 +23,9 @@ class Solution(object):
                 y=1
             elif s[i]=="V":
                 y=5
-            elif z[i]=="X":
+            elif s[i]=="X":
                 y=10
-            elif z[i]=="L":
+            elif s[i]=="L":
                 y=50
             elif z[i]=="C":
                 y=100
