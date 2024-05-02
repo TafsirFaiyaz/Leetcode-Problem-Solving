@@ -3,7 +3,7 @@
 class Solution(object):
     def romanToInt(self, s):
        
-        z=s+"#"
+        z=s
         self.sum=0
         for i in range(len(z) - 2):
             y=0
