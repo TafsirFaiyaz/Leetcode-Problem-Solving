@@ -19,9 +19,9 @@ class Solution(object):
                 y=-100
             elif s[i]=="C" and s[i+1]=="M":
                 y=-100
-            elif z[i]=="I":
+            elif s[i]=="I":
                 y=1
-            elif z[i]=="V":
+            elif s[i]=="V":
                 y=5
             elif z[i]=="X":
                 y=10
