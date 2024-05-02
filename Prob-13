@@ -9,7 +9,7 @@ class Solution(object):
             y=0
             if s[i]=="I" and s[i+1]=="V":
                 y=-1
-            elif z[i]=="I" and z[i+1]=="X":
+            elif s[i]=="I" and s[i+1]=="X":
                 y=-1
             elif z[i]=="X" and z[i+1]=="L":
                 y=-10
