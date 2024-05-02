@@ -31,7 +31,7 @@ class Solution(object):
                 y=100
             elif s[i]=="D":
                 y=500
-            elif z[i]=="M":
+            elif s[i]=="M":
                 y=1000
 
             self.sum+=y
