@@ -5,7 +5,7 @@ class Solution(object):
        
         z=s+"#"
         self.sum=0
-        for i in range(len(z)-1):
+        for i in range(len(z) - 2):
             y=0
             if z[i]=="I" and z[i+1]=="V":
                 y=-1
