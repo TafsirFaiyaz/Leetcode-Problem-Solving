@@ -2,6 +2,7 @@
 
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
+
         count=0
         x=0
         l= len(nums) - 1
