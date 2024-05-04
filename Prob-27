@@ -10,11 +10,11 @@ class Solution:
         while x<len(nums):
 
             if nums[x] == val:
-                count+=1
+                count += 1
                 nums[x] = nums[l]
                 nums[l] = -55
                 l -= 1
-                x-=1
+                x -= 1
 
             x+=1
 
