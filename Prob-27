@@ -3,8 +3,8 @@
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
 
-        count=0
-        x=0
+        count= 0
+        x= 0
         l= len(nums) - 1
 
         while x<len(nums):
@@ -13,7 +13,7 @@ class Solution:
                 count+=1
                 nums[x] = nums[l]
                 nums[l] = -55
-                l-=1
+                l -= 1
                 x-=1
 
             x+=1
