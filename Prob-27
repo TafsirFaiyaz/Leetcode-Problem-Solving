@@ -7,7 +7,7 @@ class Solution:
         x= 0
         l= len(nums) - 1
 
-        while x<len(nums):
+        while x < len(nums):
 
             if nums[x] == val:
                 count += 1
