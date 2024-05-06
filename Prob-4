@@ -11,4 +11,4 @@ class Solution:
         else:
             m=x[len(x)//2]
 
-        return m
+        
