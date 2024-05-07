@@ -1,0 +1,25 @@
+#2816. Double a Number Represented as a Linked List
+
+import sys
+sys.set_int_max_str_digits(1000000000)
+
+class Solution:
+    def doubleIt(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        x = ""
+
+        while head:
+            x += str(head.val)
+            head = head.next
+            
+        i = 0
+
+        x = str(int(x)*2)        
+        l = ListNode(x[i],None)
+
+        tail = l
+        for i in range(1,len(x)):
+            n=ListNode(x[i],None)
+            tail.next=n
+            tail=n
+
+        return l
