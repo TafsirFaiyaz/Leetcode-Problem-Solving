@@ -19,6 +19,7 @@ class Solution:
         tail = l
 
         for i in range(1,len(x)):
+
             n=ListNode(x[i],None)
             tail.next=n
             tail=n
