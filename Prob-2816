@@ -10,7 +10,7 @@ class Solution:
         while head:
             x += str(head.val)
             head = head.next
-            
+
         i = 0
 
         x = str(int(x)*2)        
