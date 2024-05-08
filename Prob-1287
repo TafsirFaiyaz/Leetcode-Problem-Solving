@@ -1,0 +1,13 @@
+#1287. Element Appearing More Than 25% In Sorted Array
+
+from collections import Counter
+
+class Solution:
+    def findSpecialInteger(self, arr: List[int]) -> int:
+
+        x = Counter(arr)
+
+        for i in x.keys():
+            if  x[i] > len(arr)/4:
+                return i
+          
