@@ -10,4 +10,20 @@ class Solution:
         for i in x.keys():
             if  x[i] > len(arr)/4:
                 return i
-          
+
+# Another solution by me
+
+'''
+percent = len(arr) / 4
+d = {}
+
+for i in arr:
+    if i not in d:
+        d[i] = 1
+
+    else:
+        d[i] += 1
+
+    if d[i] > percent:
+        return i
+'''
