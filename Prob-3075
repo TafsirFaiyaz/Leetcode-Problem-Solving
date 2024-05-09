@@ -8,15 +8,16 @@ class Solution:
         j = 0
 
         if k>0:
+
             for i in range(len(happiness)):
                 happiness[i] -= j
 
                 if happiness[i] <= 0:
                     return count
 
-
                 count+=happiness[i]
                 j += 1
                 k -= 1
+
                 if k <= 0:
                     return count
