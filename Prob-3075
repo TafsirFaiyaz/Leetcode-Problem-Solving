@@ -2,9 +2,11 @@
 
 class Solution:
     def maximumHappinessSum(self, happiness: List[int], k: int) -> int:
+
         happiness.sort(reverse=True)
         count=0
         j = 0
+
         if k>0:
             for i in range(len(happiness)):
                 happiness[i] -= j
