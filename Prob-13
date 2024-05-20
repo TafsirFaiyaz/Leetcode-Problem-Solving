@@ -35,9 +35,12 @@ class Solution:
                 y=100
             elif s[i]=="D":
                 y=500
+
             elif s[i]=="M":
                 y=1000
 
             self.sum+=y
+
         return self.sum
+
             
