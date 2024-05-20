@@ -10,10 +10,12 @@ class Solution:
                 y=-1
             elif s[i]=="I" and s[i+1]=="X":
                 y=-1
+
             elif s[i]=="X" and s[i+1]=="L":
                 y=-10
             elif s[i]=="X" and s[i+1]=="C":
                 y=-10
+
             elif s[i]=="C" and s[i+1]=="D":
                 y=-100
             elif s[i]=="C" and s[i+1]=="M":
