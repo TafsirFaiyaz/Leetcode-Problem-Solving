@@ -20,14 +20,17 @@ class Solution:
                 y=-100
             elif s[i]=="C" and s[i+1]=="M":
                 y=-100
+
             elif s[i]=="I":
                 y=1
             elif s[i]=="V":
                 y=5
+
             elif s[i]=="X":
                 y=10
             elif s[i]=="L":
                 y=50
+
             elif s[i]=="C":
                 y=100
             elif s[i]=="D":
