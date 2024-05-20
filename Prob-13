@@ -2,8 +2,10 @@ class Solution:
     def romanToInt(self, s: str) -> int:
         s += " "
         self.sum=0
+
         for i in range(len(s) - 1):
             y=0
+
             if s[i]=="I" and s[i+1]=="V":
                 y=-1
             elif s[i]=="I" and s[i+1]=="X":
