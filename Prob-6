@@ -21,7 +21,7 @@ class Solution:
         return ''.join(rows)
         
 '''
-# Anotehr Solution
+# Another Solution
 
 class Solution:
     def convert(self, s: str, numRows: int) -> str:
