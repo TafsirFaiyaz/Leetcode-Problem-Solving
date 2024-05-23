@@ -3,16 +3,31 @@
 class Solution(object):
 
     def twoSum(self, nums, target):
-         
-        result=[]     # result list
+        N = len(nums)
     
-        for i in range(len(nums)):
+        for i in range(N):
             
-            for j in range(i+1,len(nums)):
-                sum = nums[j] + nums[i]   
+            for j in range(i+1,N):
        
-                if sum==target:        # Checking if the sum of i'th element and j'th element is the desired target
-                    x.append(i)
-                    x.append(j)
-                        
-        return x
+                if nums[j] + nums[i] == target:        # Checking if the sum of i'th element and j'th element is the desired target
+                 
+                    return [i,j] 
+
+        return []
+
+
+'''
+# Another solution by me which is optimized to O(n) time complexity
+
+        numToIndex = {}
+
+        for i in range(len(nums)):
+
+            if target - nums[i] in numToIndex:
+                return [numToIndex[target - nums[i]], i]
+
+            numToIndex[nums[i]] = i
+
+        return []
+
+'''
