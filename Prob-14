@@ -1,0 +1,22 @@
+#14. Longest Common Prefix
+
+class Solution(object):
+    def longestCommonPrefix(self, strs):
+        
+        st=""
+        output=False
+        max=999999999999999
+        for i in strs:
+            if len(i)<max:
+                max=len(i)
+                l=i
+        for i in range(len(l)):
+            m=l[i]
+            for j in strs:
+                if j[i]!=m:
+                    output=True
+            if output==False:
+                st+=m
+            else:
+                break
+        return st
