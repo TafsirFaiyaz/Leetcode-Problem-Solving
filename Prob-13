@@ -6,9 +6,12 @@ class Solution:
         for i in range(len(s) - 1):
             y=0
 
-            if s[i]=="I" and s[i+1]=="V":
+            if s[i]=="I" and s[i+1]=="V":       #Checking if the strings i'th and i+1'th element is "IV"
                 y=-1
-            elif s[i]=="I" and s[i+1]=="X":
+                                                # Reducing -1 because "IV" = 4 but when the i will increase the next value would be "V" = 5. 
+                                                # So ultimately sum will result in 5-1 = 4  
+
+            elif s[i]=="I" and s[i+1]=="X":    # Checking if it is "IX"
                 y=-1
 
             elif s[i]=="X" and s[i+1]=="L":
