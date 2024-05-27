@@ -17,17 +17,35 @@ class Solution(object):
 
 
 '''
-# Another solution by me which is optimized to O(n) time complexity
+# Another solution by me which is optimized to O(n) time complexity (Most efficient way)
 
         numToIndex = {}
 
         for i in range(len(nums)):
+            x = target - nums[i]    # x is what we need to add with nums[i] to find the target
+             
+            if x in numToIndex:           
 
-            if target - nums[i] in numToIndex:
-                return [numToIndex[target - nums[i]], i]
+                return [numToIndex[target - nums[i]], i]         
 
             numToIndex[nums[i]] = i
 
         return []
 
 '''
+
+'''
+# Another Approach
+
+        for i in range(len(nums)):
+            compliment = target - nums[i]
+
+            if compliment in nums:
+                index = nums.index(compliment)  # Searching for the index number which holds the compliment value
+
+                if index != i:    # Checking if the i'th value and index value is the same 
+                    return index,i
+        
+        return []
+'''
+
