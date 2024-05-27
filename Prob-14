@@ -5,18 +5,19 @@ class Solution(object):
         
         st=""
         output=False
-        max=999999999999999
-        for i in strs:
-            if len(i)<max:
-                max=len(i)
-                l=i
+        min=9999999
+
+        for i in strs:      # Trying to find the shortest string in the list because the longest common prefix a string in the list can have is the shortest string
+                        
+            if len(i)<min:  
+                min=len(i)
+                shortest_string=i
+
         for i in range(len(l)):
-            m=l[i]
-            for j in strs:
+            m=shortest_string[i]    
+
+            for j in strs:    #checking if m is present in all the string in the list
                 if j[i]!=m:
-                    output=True
-            if output==False:
-                st+=m
-            else:
-                break
-        return st
+                    return st
+
+        
