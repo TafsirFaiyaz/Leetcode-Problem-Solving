@@ -1,0 +1,31 @@
+#21. Merge Two Sorted Lists
+
+class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        dummy = ListNode()
+        current = dummy
+
+        while list1 and list2:            
+            if list1.val >= list2.val:
+                current.next = list2
+                current = current.next
+                list2 = list2.next
+
+            else:
+                current.next = list1
+                current = current.next
+                list1 = list1.next
+
+        while list1:                    # If only list1 is left
+            current.next = list1
+            current = current.next
+            list1 = list1.next
+
+        while list2:                    # If only list2 is left
+            current.next = list2
+            current = current.next
+            list2 = list2.next
+
+        return dummy.next
+
+# This is basically the concept of merge sorting
