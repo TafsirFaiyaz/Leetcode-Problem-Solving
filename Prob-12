@@ -7,15 +7,18 @@ class Solution:
         s=""
         n=x
         while x>3:
+
             n=x
-            if x//1000!=0:
-                x=x%1000
-                n=n//1000
+            if x//1000!=0:    # Checks for thousands. If x is 1000 or more, it appends "M" for each thousand
+                x=x%1000      
+                n=n//1000     # Counting how many M we have to append
                 s+="M"*n
+
             elif x//900!=0:
                 x=x%900
                 n=n//900
                 s+="CM"*n
+
             elif x//500!=0:
                 x=x%500
                 n=n//500
@@ -46,14 +49,17 @@ class Solution:
                 x=x%40
                 n=n//40
                 s+="XL"*n
+
             elif x//10!=0:
                 x=x%10
                 n=n//10
                 s+="X"*n
+
             elif x//9!=0:
                 x=x%9
                 n=n//9
                 s+="IX"*n
+
             elif x//5!=0:
                 x=x%5
                 n=n//5
@@ -65,5 +71,5 @@ class Solution:
                 s+="IV"*n
             
 
-        s+="I"*x
+        s+="I"*x       # If x still not 0 then it appends "I" x times at the end of the string 
         return s
