@@ -1,0 +1,10 @@
+#29. Divide Two Integers
+
+class Solution:
+    def divide(self, dividend: int, divisor: int) -> int:
+        a=str(dividend/divisor)
+        if float(a)>=2147483648:
+            return int(a.split(".")[0])-1
+        else:
+            return int(a.split(".")[0]) 
+        
