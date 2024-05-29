@@ -2,14 +2,15 @@
 
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
-        if haystack is None or needle is None:
+        if haystack is None or needle is None:         # Checking the side cases
             return -1
         
         if haystack == needle:
             return 0
         
-        for i in range(len(haystack) - len(needle) + 1):
-            if haystack[i:i + len(needle)] == needle:
+        for i in range(len(haystack) - len(needle) + 1):            
+
+            if haystack[i : i + len(needle)] == needle:   # Slicing haystack from i to i + len(needle) and checking if it equal to needle. If yes we return i
                 return i
 
-        return -1
+        return -1       # it means needle in not in haystack
