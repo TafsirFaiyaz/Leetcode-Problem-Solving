@@ -4,15 +4,16 @@ class Solution:
     def specialArray(self, nums: List[int]) -> int:        
         n = len(nums)
     
-        for x in range(1, n + 1):
-            count = 0
+        for special_num in range(1, n + 1):
+
+            count = 0       # Initializing count as 0 because we want to count for all numbers from 1 to n
             for num in nums:
 
-                if num >= x:
+                if num >= special_num:    # Checking if the num in nums is greater than or equal to special_num
                     count += 1
 
-            if count == x:
-                return x
+            if count == special_num:      # Checking if count is the same as special_num. if yes then it is our result
+                return special_num
 
-        return -1
+        return -1       # It means there is no special number in the array
         
