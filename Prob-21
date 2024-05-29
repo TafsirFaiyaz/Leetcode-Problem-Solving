@@ -1,5 +1,8 @@
 #21. Merge Two Sorted Lists
 
+# This is basically the concept of merge sorting
+
+
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         dummy = ListNode()
@@ -28,4 +31,3 @@ class Solution:
 
         return dummy.next
 
-# This is basically the concept of merge sorting
