@@ -1,23 +1,15 @@
 # Remove Element prob-27
 
-class Solution:
-    def removeElement(self, nums: List[int], val: int) -> int:
+class Solution(object):
 
-        count = 0
-        x = 0
-        l= len(nums) - 1
+    def removeElement(self, nums, val):
 
-        while x < len(nums):
+        k = 0
 
-            if nums[x] == val:
+        for i in range(len(nums)):
+            if nums[i] != val:           # By doing this we are ignoring the val and replacing with a element which is not val
+                nums[k] = nums[i]
+                k += 1                    # Only incrementing k if nums[i] != val
 
-                count += 1
-                nums[x] = nums[l]
-                nums[l] = -55
-
-                l -= 1
-                x -= 1
-
-            x+=1
-
-        return len(nums) - count
+        return k
+        
