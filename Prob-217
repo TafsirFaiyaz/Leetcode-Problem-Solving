@@ -5,7 +5,7 @@ class Solution:
 
         unq_val = set()
         for num in nums:
-            if num in unq_val:
+            if num in unq_val:        #If a number is already in unq_val that means the num occurs twice.
                 return True
             unq_val.add(num)
-        return False
+        return False            # Means every number is unique
