@@ -3,9 +3,12 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
 
-        unq_val = set()
+        unq_val = set()     # Set don't take duplicate value
+
         for num in nums:
             if num in unq_val:        #If a number is already in unq_val that means the num occurs twice.
                 return True
+
             unq_val.add(num)
+
         return False            # Means every number is unique
