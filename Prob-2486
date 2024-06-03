@@ -9,13 +9,14 @@ class Solution(object):
         """
 
         n = len(t)
-        j = 0
+        j = 0         # J is the counter for how many subsequence charecters of t is present in s.
 
         for i in s:
             if i == t[j]:
                 j += 1
-                if j == n:
-                    break
+
+                if j == n:      # if it is true that means that s already has the subsequence and don't need to append any val.
+                    return 0
 
 
         return n - j
