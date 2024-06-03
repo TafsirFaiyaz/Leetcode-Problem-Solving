@@ -1,0 +1,11 @@
+#217. Contains Duplicate
+
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+
+        unq_val = set()
+        for num in nums:
+            if num in unq_val:
+                return True
+            unq_val.add(num)
+        return False
