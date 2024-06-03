@@ -1,0 +1,26 @@
+#290. Word Pattern
+
+class Solution:
+    def wordPattern(self, pattern: str, s: str) -> bool:
+        x = s.split()
+        if len(x) != len(pattern):
+            return False
+
+        m = {}
+        unique_val = []
+
+        for i in range(len(pattern)):
+            if pattern[i] not in m:
+                if x[i] not in unique_val:
+                    m[pattern[i]] = x[i]
+                    unique_val.append(x[i])
+
+                else:
+                    return False
+
+            else:
+                if m[pattern[i]] != x[i]:
+                    return False
+
+        return True 
+        
