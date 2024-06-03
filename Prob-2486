@@ -1,0 +1,22 @@
+# 2486. Append Characters to String to Make Subsequence
+
+class Solution(object):
+    def appendCharacters(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: int
+        """
+
+        n = len(t)
+        j = 0
+
+        for i in s:
+            if i == t[j]:
+                j += 1
+                if j == n:
+                    break
+
+
+        return n - j
+        
