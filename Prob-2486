@@ -19,5 +19,5 @@ class Solution(object):
                     return 0
 
 
-        return n - j
+        return n - j       #returning how many charecters need to be appended in s
         
