@@ -1,5 +1,7 @@
 #1002. Find Common Characters
 
+# The result accepts duplicates mean, the result can have same value twice. for example, if there are two "a" common in all strings the result must have ["a", "a"] in it.
+
 class Solution(object):
     def commonChars(self, words):
         """
@@ -9,7 +11,7 @@ class Solution(object):
         result = []
 
         for i in range(len(words[0])):
-            x = words[0][i]
+            x = words[0][i]                # Will check by each charecter of word[0]
             
             if x not in result:
                 
@@ -18,12 +20,12 @@ class Solution(object):
                 
                 for j in words:
                     
-                    if x not in j:
+                    if x not in j:       # If the charecter is missing in 1 string then we don't need to check others as it won't be in our result.
                         output = False
                         break
 
                     else:
-                        count = 0
+                        count = 0        # Checking the minimum number of occurance of the same charecter.
                         for k in j:
                             if k == x:
                                 count +=1
@@ -33,7 +35,7 @@ class Solution(object):
                 
                 if output:
                     
-                    for l in range(mini):
+                    for l in range(mini):   # appending the minimum number of occurance of the same string, as the result can have duplicate strings.
                         
                         result.append(x)
 
