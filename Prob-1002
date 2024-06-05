@@ -1,0 +1,40 @@
+#1002. Find Common Characters
+
+class Solution(object):
+    def commonChars(self, words):
+        """
+        :type words: List[str]
+        :rtype: List[str]
+        """
+        result = []
+
+        for i in range(len(words[0])):
+            x = words[0][i]
+            
+            if x not in result:
+                
+                mini = 99999
+                output = True
+                
+                for j in words:
+                    
+                    if x not in j:
+                        output = False
+                        break
+
+                    else:
+                        count = 0
+                        for k in j:
+                            if k == x:
+                                count +=1
+
+                        if count < mini:
+                            mini = count
+                
+                if output:
+                    
+                    for l in range(mini):
+                        
+                        result.append(x)
+
+        return result
