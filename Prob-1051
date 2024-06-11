@@ -1,0 +1,16 @@
+#1051. Height Checker
+
+class Solution(object):
+    def heightChecker(self, heights):
+        """
+        :type heights: List[int]
+        :rtype: int
+        """
+        x = sorted(heights)
+        count = 0
+        for i in range(len(x)):
+            if x[i] != heights[i]:
+                count += 1
+
+        return count
+        
