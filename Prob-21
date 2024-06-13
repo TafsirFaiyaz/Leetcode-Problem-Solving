@@ -5,12 +5,12 @@
 
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-        dummy = ListNode()
+        dummy = ListNode()               # Creating dummy node so that we can easily return the value of head
         current = dummy
 
         while list1 and list2:            
-            if list1.val >= list2.val:
-                current.next = list2
+            if list1.val >= list2.val:    # Checking which value is smaller so that we can point the current to the next node
+                current.next = list2 
                 current = current.next
                 list2 = list2.next
 
