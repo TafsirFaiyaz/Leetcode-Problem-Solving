@@ -1,5 +1,7 @@
 #2037. Minimum Number of Moves to Seat Everyone
 
+# If we sort both seats and students then for i'th position we can get the minimum amount of moves
+
 class Solution:
     def minMovesToSeat(self, seats: List[int], students: List[int]) -> int:
         seats.sort()
@@ -7,7 +9,7 @@ class Solution:
         moves = 0
 
         for i in range(len(seats)):
-            moves += (abs(seats[i] - students[i]))
+            moves += (abs(seats[i] - students[i]))        # Taking absolute value because (seats[i] - students[i]) can be negative too
 
         return moves
 
