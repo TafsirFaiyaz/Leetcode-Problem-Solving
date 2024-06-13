@@ -1,6 +1,6 @@
 #1051. Height Checker
 
-# The answer is basically checking if the given i'th position of height is in the sorted position or not 
+# The answer is basically checking if the given i'th position of height is exactly in the i'th position of sorted height or not 
 
 class Solution(object):
     def heightChecker(self, heights):
