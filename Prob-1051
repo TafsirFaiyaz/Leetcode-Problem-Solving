@@ -1,5 +1,7 @@
 #1051. Height Checker
 
+# The answer is basically checking if the given i'th position of height is in the sorted position or not 
+
 class Solution(object):
     def heightChecker(self, heights):
         """
@@ -8,6 +10,7 @@ class Solution(object):
         """
         x = sorted(heights)
         count = 0
+
         for i in range(len(x)):
             if x[i] != heights[i]:
                 count += 1
