@@ -6,9 +6,13 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
+
         sum = 0
 
         for i in range(len(s)-1):
-            sum += (abs(ord(s[i])-ord(s[i+1])))
+            x = ord(s[i]) - ord(s[i+1]             # The diffrence of 2 consecutive value
+            y = abs(x)                             # Making it absolute value as x can be negative too
+
+            sum += y
 
         return sum
