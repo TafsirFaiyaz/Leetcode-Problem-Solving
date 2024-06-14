@@ -3,16 +3,17 @@
 class Solution:
     def maximumHappinessSum(self, happiness: List[int], k: int) -> int:
 
-        happiness.sort(reverse=True)
-        count=0
-        j = 0
+        happiness.sort(reverse=True)             # getting all the highest numbers
+        count=0                                  # Count is our result
+
+        j = 0                                    # J is the counter of how many happiness we have distributed
 
         if k>0:
 
             for i in range(len(happiness)):
-                happiness[i] -= j
+                happiness[i] -= j                    # decreasing happiness[i] because we have to distributed j times. Ignore this value for 2 iterative and it will make sense.
 
-                if happiness[i] <= 0:
+                if happiness[i] <= 0:                # It means happiness[i] is already <= 0 and even if we go further it will remain the same as the list is already sorted.
                     return count
 
                 count+=happiness[i]
