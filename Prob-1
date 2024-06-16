@@ -1,4 +1,6 @@
- # Two sum prob-1
+# Two sum prob-1
+
+# This problem is finding if two numbers in a list sums upto target
 
 class Solution(object):
 
@@ -26,7 +28,7 @@ class Solution(object):
              
             if x in numToIndex:           
 
-                return [numToIndex[target - nums[i]], i]         
+                return [numToIndex[x], i]         
 
             numToIndex[nums[i]] = i
 
