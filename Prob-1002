@@ -1,6 +1,6 @@
 #1002. Find Common Characters
 
-# The result accepts duplicates mean, the result can have same value twice. for example, if there are two "a" common in all strings the result must have ["a", "a"] in it.
+# The result accepts duplicate val. It means, if there are two "a" common in all strings the result must have ["a", "a"] in it.
 
 class Solution(object):
     def commonChars(self, words):
