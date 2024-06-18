@@ -1,23 +1,15 @@
-#14. Longest Common Prefix
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
 
-class Solution(object):
-    def longestCommonPrefix(self, strs):
-        
         st=""
-        output=False
-        min=9999999
-
-        for i in strs:      # Trying to find the shortest string in the list because the longest common prefix a string in the list can have is the shortest string
-                        
-            if len(i)<min:  
-                min=len(i)
-                shortest_string=i
+        l = strs[0]
 
         for i in range(len(l)):
-            m=shortest_string[i]    
+            m = l[i]    
 
-            for j in strs:    #checking if m is present in all the string in the list
-                if j[i]!=m:
+            for j in strs:       
+                
+                if j[i] != m:           #checking if m is present in all the string in the list
                     return st
 
-        
+            st += m
