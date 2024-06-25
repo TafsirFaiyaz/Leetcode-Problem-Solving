@@ -8,6 +8,7 @@ class Solution(object):
         :type heights: List[int]
         :rtype: int
         """
+
         x = sorted(heights)
         count = 0
 
