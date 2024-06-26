@@ -1,0 +1,36 @@
+#1382. Balance a Binary Search Tree
+
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+class Solution(object):
+    def balanceBST(self, root):
+        """
+        :type root: TreeNode
+        :rtype: TreeNode
+        """
+        def inorder_traversal(root, sorted_list):
+            if root:
+                inorder_traversal(root.left, sorted_list)
+                sorted_list.append(root.val)
+                inorder_traversal(root.right, sorted_list)
+
+        def sorted_list_to_bst(start, end, sorted_list):
+            if start > end:
+                return None
+            mid = (start + end) // 2
+            node = TreeNode(sorted_list[mid])
+            node.left = sorted_list_to_bst(start, mid - 1, sorted_list)
+            node.right = sorted_list_to_bst(mid + 1, end, sorted_list)
+            return node
+
+
+        sorted_list = []
+        inorder_traversal(root, sorted_list)
+        return sorted_list_to_bst(0, len(sorted_list) - 1, sorted_list)
+
+        
