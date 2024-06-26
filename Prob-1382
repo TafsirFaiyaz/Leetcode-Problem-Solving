@@ -15,15 +15,17 @@ class Solution(object):
         :type root: TreeNode
         :rtype: TreeNode
         """
-        def inorder_traversal(root, sorted_list):
+
+        def inorder_traversal(root, sorted_list):                    # Doing In-order Traversal
             if root:
                 inorder_traversal(root.left, sorted_list)
                 sorted_list.append(root.val)
                 inorder_traversal(root.right, sorted_list)
 
-        def sorted_list_to_bst(start, end, sorted_list):
+        def sorted_list_to_bst(start, end, sorted_list):            # Making the new BST
             if start > end:
                 return None
+
             mid = (start + end) // 2
             node = TreeNode(sorted_list[mid])
             node.left = sorted_list_to_bst(start, mid - 1, sorted_list)
