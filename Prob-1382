@@ -1,5 +1,7 @@
 #1382. Balance a Binary Search Tree
 
+# First inorder traverse through the BST because it gives the sorted order of the BST. Then create a new BST
+
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, val=0, left=None, right=None):
