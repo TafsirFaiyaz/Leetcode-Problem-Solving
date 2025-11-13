@@ -6,7 +6,7 @@ class Solution(object):
 
         left, right = 1, x//2
 
-        while left<=right:
+        while left<=right:                      # It is basically a binary search
             mid = (left+right)//2
             z = mid * mid
 

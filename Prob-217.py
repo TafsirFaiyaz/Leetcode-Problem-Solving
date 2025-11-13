@@ -1,7 +1,7 @@
 #217. Contains Duplicate
 
 class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
+    def containsDuplicate(self, nums: list[int]) -> bool:
 
         unq_val = set()     # Set don't take duplicate value
 
