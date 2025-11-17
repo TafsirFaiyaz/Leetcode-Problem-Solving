@@ -15,7 +15,7 @@ class Solution(object):
         if p.val != q.val:
             return False
 
-        if not self.inorder(p.left, q.right):
+        if not self.inorder(p.left, q.right):           # sending Left subtree of p and Right subtree of q
             return False
 
         if not self.inorder(p.right, q.left):
