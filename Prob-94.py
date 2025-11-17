@@ -15,3 +15,8 @@ class Solution(object):
 
         return(self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right))
        
+       
+       
+       # self.inorderTraversal(root.left) = left subtree values in inorder   = It is going absolute left first until it finds None then it starts returning values
+       # [root.val] = root value in list    
+       # self.inorderTraversal(root.right) = right subtree values in inorder

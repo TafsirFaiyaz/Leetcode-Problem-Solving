@@ -1,5 +1,5 @@
 class Solution(object):
-    def climbStairs(self, n):
+    def climbStairs(self, n):               # Fibonacci sequence problem you will understand if you take steps 10 and 20
         """
         :type n: int
         :rtype: int
