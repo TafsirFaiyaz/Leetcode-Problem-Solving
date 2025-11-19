@@ -20,16 +20,3 @@ class Solution(object):
             return root
 
         return build(0, len(nums)-1)
-    
-    
-nums = [-10,-3,0,5,9]
-sol = Solution()
-root = sol.sortedArrayToBST(nums)
-def print_tree(node):
-    if not node:
-        return
-    print_tree(node.left)
-    print(node.val)
-    print_tree(node.right)
-    
-print_tree(root)
