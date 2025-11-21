@@ -10,6 +10,6 @@ class Solution:
             return False
         
         if not root.left and not root.right:
-            return targetSum == root.val
+            return targetSum == root.val        # Check if we are at a leaf node and if the remaining targetSum equals the node's value
         
-        return (self.hasPathSum(root.left, targetSum - root.val) or self.hasPathSum(root.right, targetSum - root.val))
+        return (self.hasPathSum(root.left, targetSum - root.val) or self.hasPathSum(root.right, targetSum - root.val)) # Recur for left and right subtrees with the updated targetSum
