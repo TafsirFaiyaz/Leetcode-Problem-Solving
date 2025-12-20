@@ -5,12 +5,12 @@ class Solution(object):
         :type k: int
         :rtype: bool
         """
-        seen = {}
+        seen = {}    # num -> last index
 
-        for i, num in enumerate(nums):
-            if num in seen and i - seen[num] <= k:
+        for i, num in enumerate(nums):               # i is the current index and num is the current number in nums
+            if num in seen and i - seen[num] <= k:   # check if we have seen num before and if the distance is within k
                 return True
-            seen[num] = i
+            seen[num] = i                     # update the last index of num to the current index i                 
 
         return False
                 
